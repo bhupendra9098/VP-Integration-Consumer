@@ -1,0 +1,40 @@
+spring:
+  profiles:
+    active: qa
+  data:
+    mongodb:
+      host: 192.1.20.244
+      port: 27017
+      database: vp-integrator
+  rabbitmq:
+    host: 192.1.20.244
+    username: jbm
+    password: jbmoglix
+    port: 5672
+rabbitmq:
+  publish: true
+um:
+  vendor:
+    upsert: http://192.1.20.244/authvp/vendor/upsert
+  employee:
+    upsert: http://192.1.20.244/authvp/employee/upsert
+jvp:
+  agreement:
+    create: http://192.1.20.244/vp/agreement/create
+  schedule:
+    create: http://192.1.20.244/vp/schedule/create/multiple
+  grn:
+    create: http://192.1.20.244/vp/grn/create
+  payment:
+    create: http://192.1.20.244/vp/payment/create
+  organisation:
+    create: http://192.1.20.244/vp/organisation/create
+  trip:
+    create: http://192.1.20.244/vp/trip/create
+    delete: http://192.1.20.244/vp/trip
+  material:
+    update: http://192.1.20.244/vp/material/update
+  sl:
+    create: http://192.1.20.244/vp/sl/upsert
+  vr:
+    create: http://192.1.20.244/vp/vendor/rating/upsert
