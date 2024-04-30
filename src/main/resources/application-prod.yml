@@ -1,0 +1,42 @@
+spring:
+  profiles:
+    active: prod
+  data:
+    mongodb:
+      host: 192.1.20.246
+      port: 27017
+      database: vp-integrator
+  rabbitmq:
+    host: 192.1.20.247
+    username: jbm
+    password: jbmprod
+    port: 5672
+rabbitmq:
+  publish: true
+um:
+  vendor:
+    upsert: https://supplierportal.jbmgroup.com/authvp/vendor/upsert
+  employee:
+    upsert: https://supplierportal.jbmgroup.com/authvp/employee/upsert
+jvp:
+  agreement:
+    create: https://supplierportal.jbmgroup.com/vp/agreement/create
+  schedule:
+    create: https://supplierportal.jbmgroup.com/vp/schedule/create/multiple
+  grn:
+    create: https://supplierportal.jbmgroup.com/vp/grn/create
+  payment:
+    create: https://supplierportal.jbmgroup.com/vp/payment/create
+  organisation:
+    create: https://supplierportal.jbmgroup.com/vp/organisation/create
+  trip:
+    create: https://supplierportal.jbmgroup.com/vp/trip/create
+    delete: https://supplierportal.jbmgroup.com/vp/trip
+  material:
+    update: https://supplierportal.jbmgroup.com/vp/material/update
+  sl:
+    create: https://supplierportal.jbmgroup.com/vp/sl/upsert
+  rfqmaterial:
+    upsert: https://supplierportal.jbmgroup.com/vp/rfq/material/create
+  vr:
+    create: https://supplierportal.jbmgroup.com/vp/vendor/rating/upsert

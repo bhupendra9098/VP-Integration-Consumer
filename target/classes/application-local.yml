@@ -1,0 +1,40 @@
+spring:
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: vp-integrator
+  rabbitmq:
+    host: localhost
+    username: guest
+    password: guest
+    port: 5672
+rabbitmq:
+  publish: true
+um:
+  vendor:
+    upsert: http://localhost:8080/authvp/vendor/upsert
+  employee:
+    upsert: https://authvpqa.moglilabs.com/authvp/employee/upsert
+jvp:
+  agreement:
+    create: http://localhost:7788/vp/agreement/create
+  schedule:
+    create: http://localhost:7788/vp/schedule/create/multiple
+  grn:
+    create: http://localhost:7788/vp/grn/create
+  payment:
+    create: http://localhost:7788/vp/payment/create
+  organisation:
+    create: http://localhost:7788/vp/organisation/create
+  trip:
+    create: http://localhost:8484/vp/trip/create
+    delete: http://localhost:8484/vp/trip
+  material:
+    update: http://localhost:8484/vp/material/update
+  sl:
+    create: http://localhost:8484/vp/sl/upsert
+  vr:
+    create: http://localhost:8484/vp/vendor/rating/upsert
+  rfqmaterial:
+    upsert: http://localhost:8484/vp/rfq/material/create
